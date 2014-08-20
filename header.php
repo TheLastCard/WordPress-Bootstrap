@@ -27,24 +27,53 @@
 
 		<!-- wrapper -->
 		<div class="container">
-
 			<!-- header -->
-			<header class="header clear" role="banner">
+			<header class="header clear row" role="banner">
+					<div class="col-md-12">
+						<!-- header title -->
+						<h1 class="title"><?php bloginfo('name'); ?><br>
+							<span><?php bloginfo('description'); ?></span>
+						</h1>
+						<!-- /header title -->
 
-					<!-- logo -->
-					<div class="logo">
-						<a href="<?php echo home_url(); ?>">
-							<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
-							<img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="Logo" class="logo-img">
-						</a>
-					</div>
-					<!-- /logo -->
+						<!-- header image -->
+				
+						<?php if ( get_header_image() ) : ?>
+						<div id="site-header">
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+								<img class="headerImage" src="<?php header_image(); ?>"  alt="">
+							</a>
+						</div>
+						<?php endif; ?>
+						<!-- /header image -->
+						
+						<!-- nav -->
+						<nav class="navbar navbar-default" role="navigation">
+						  <div class="container-fluid">
+						    <!-- Brand and toggle get grouped for better mobile display -->
+						    <div class="navbar-header">
+						      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						        <span class="sr-only">Toggle navigation</span>
+						        <span class="icon-bar"></span>
+						        <span class="icon-bar"></span>
+						        <span class="icon-bar"></span>
+						      </button>
+						      <a class="navbar-brand" href="#">Brand</a>
+						    </div>
 
-					<!-- nav -->
-					<nav class="nav" role="navigation">
-						<?php html5blank_nav(); ?>
-					</nav>
-					<!-- /nav -->
+						    <!-- Collect the nav links, forms, and other content for toggling -->
 
+						    <?php html5blank_nav(); ?>
+						      <!-- <ul class="nav navbar-nav">
+						        <li class="active"><a href="#">Link</a></li>
+						        <li><a href="#">Link</a></li>
+						      </ul> -->
+
+						  </div><!-- /.container-fluid -->
+						</nav>
+
+							
+						<!-- /nav -->
+					</div><!-- /.col-md-12 -->
 			</header>
 			<!-- /header -->
