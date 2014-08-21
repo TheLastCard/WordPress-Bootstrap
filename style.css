@@ -81,6 +81,16 @@ input:focus {
 	width: 100%;
 	height: auto;
 }
+
+.title{
+	position: absolute;
+	color: white;
+	top: 0px;
+	margin: 2% 2%;
+	background-color: black;
+	border:1px solid white;
+	padding: 5px;
+}
 /* logo */
 .logo {
 
@@ -99,6 +109,22 @@ input:focus {
 /* footer */
 .footer {
 
+}
+
+.comments ul{
+	list-style: none;
+}
+.comment-author{
+	margin: 0px 0px 10px 0px;
+}
+.comment-meta{
+	font-size: 1.2rem;
+	font-style: italic;
+	margin-bottom: 5px;
+}
+.comment-body p{
+	/*border: 1px solid #CCC;*/
+	padding: 5px;
 }
 
 /*------------------------------------*\

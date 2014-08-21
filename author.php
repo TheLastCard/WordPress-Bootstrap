@@ -38,9 +38,9 @@
 				<!-- /Post title -->
 
 				<!-- post details -->
-				<span class="date"><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></span>
-				<span class="author"><?php _e( 'Published by', 'html5blank' ); ?> <?php the_author_posts_link(); ?></span>
-				<span class="comments"><?php comments_popup_link( __( 'Leave your thoughts', 'html5blank' ), __( '1 Comment', 'html5blank' ), __( '% Comments', 'html5blank' )); ?></span>
+				<span class="date"><?php the_time('F j, Y H:i'); ?></span>
+				<span class="author"><?php _e( 'Publisert av', 'html5blank' ); ?> <?php the_author_posts_link(); ?></span>
+				<span class="comments well"><?php if (comments_open( get_the_ID() ) ) comments_popup_link( __( 'Kommenter', 'html5blank' ), __( '1 Kommentar', 'html5blank' ), __( '% Kommentarer', 'html5blank' )); ?></span>
 				<!-- /post details -->
 
 				<?php html5wp_excerpt('html5wp_index'); // Build your custom callback length in functions.php ?>
@@ -59,7 +59,7 @@
 			<!-- article -->
 			<article>
 
-				<h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
+				<h2><?php _e( 'Beklager, siden er tom.', 'html5blank' ); ?></h2>
 
 			</article>
 			<!-- /article -->
